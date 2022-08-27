@@ -1,5 +1,6 @@
 package com.example.restapis.controller;
 
+import com.example.restapis.model.Entity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -22,5 +23,9 @@ public class RestAPI {
         return "<h1><font color=orange>Hello! " + name + " From BridgeLabz!!</font></h1>" +
                 "</br> <font color=yellow>Passing name as a path variable.</font>";
     }
-
+    //Use POST Request Method and pass first name and last name in the Body
+    @PostMapping("/post")
+    public String post(@RequestBody Entity entity) {
+        return "Hello " + entity.getFirstName() + " "+  entity.getLastName() + "!";
+    }
 }
