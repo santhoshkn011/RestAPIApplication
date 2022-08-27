@@ -31,7 +31,7 @@ public class RestAPI {
     /*Use PUT Request Method and pass first name as
     Path Variable and last name as Query Parameter*/
     @PutMapping("/put/{firstName}")
-    public String sayHello(@PathVariable String firstName,
+    public String put(@PathVariable String firstName,
                            @RequestParam(value = "lastName") String lastName) {
         return "Hello " + firstName + " " + lastName + "!";
     }
