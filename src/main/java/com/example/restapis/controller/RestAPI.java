@@ -22,4 +22,5 @@ public class RestAPI {
         return "<h1><font color=orange>Hello! " + name + " From BridgeLabz!!</font></h1>" +
                 "</br> <font color=yellow>Passing name as a path variable.</font>";
     }
+
 }
